@@ -1,0 +1,6 @@
+framework module Pods_lifeStyle {
+  umbrella header "Pods-lifeStyle-umbrella.h"
+
+  export *
+  module * { export * }
+}

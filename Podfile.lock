@@ -1,0 +1,43 @@
+PODS:
+  - Alamofire (4.4.0)
+  - BTNavigationDropdownMenu (0.4.1)
+  - FoldingCell (2.0.5)
+  - PMAlertController (2.1.2)
+  - RAMAnimatedTabBarController (2.0.13)
+  - SwiftForms (1.7)
+  - SwiftRefresher (0.9.3)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - BTNavigationDropdownMenu (from `https://github.com/PhamBaTho/BTNavigationDropdownMenu.git`, branch `swift-3.0`)
+  - FoldingCell (~> 2.0.3)
+  - PMAlertController
+  - RAMAnimatedTabBarController (~> 2.0.13)
+  - SwiftForms
+  - SwiftRefresher (~> 0.9.0)
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  BTNavigationDropdownMenu:
+    :branch: swift-3.0
+    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
+
+CHECKOUT OPTIONS:
+  BTNavigationDropdownMenu:
+    :commit: 2c08c8579cf7a53ecb3dbf578e6e1034080a9859
+    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  BTNavigationDropdownMenu: 093f3cbfad1572f2c222bdf8d17584d1e13380d4
+  FoldingCell: fb189fc746e95b722a1debf8ef455006b70cae2e
+  PMAlertController: 0fbcc3d1cee86ee0bd85f693ca85f6388e504ec8
+  RAMAnimatedTabBarController: 2510f3b66954c3f77ea1042a35d34df8f5f3b604
+  SwiftForms: 3f3dbaa79fe54eb1ccd0aca8d0cd1e38eb00537e
+  SwiftRefresher: 5436bd992c17ca49259a60c8480e3fadfc223a39
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 0a8917e2eb96dc5f75df259274d444d6f2f51526
+
+COCOAPODS: 1.2.0
