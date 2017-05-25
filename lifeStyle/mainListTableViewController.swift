@@ -12,6 +12,8 @@ import PMAlertController
 import Alamofire
 import SwiftyJSON
 import SwiftRefresher
+import Social
+
 
 class mainListTableViewController: UITableViewController {
 
@@ -200,7 +202,33 @@ extension mainListTableViewController{
         let shareAlert = PMAlertController(title: "SHARE", description: "", image: nil, style: PMAlertControllerStyle.walkthrough)
         
         shareAlert.addAction(PMAlertAction(title: "WeiChat", style: PMAlertActionStyle.default))
-        shareAlert.addAction(PMAlertAction(title: "Weibo", style: PMAlertActionStyle.default))
+        shareAlert.addAction(PMAlertAction(title: "Weibo", style: PMAlertActionStyle.default,action:{()-> Void in
+            let view = sender.superview
+            let view1 = view?.superview
+            let view2 = view1?.superview
+            let view3 = view2?.superview
+            let cell = view3?.superview as! UITableViewCell
+           let indexpath = self.tableView.indexPath(for: cell)
+            
+            let sharePara = NSMutableDictionary()
+            let a = self.article.alAti[(indexpath?.row)!]
+
+            
+            let vc = SSUIShareActionSheetController()
+            
+            let im = UIImage(named: "timg.jpeg")
+            
+            sharePara.ssdkSetupSinaWeiboShareParams(byText: "http://www.baidu.com \(a.desc)", title: "\(a.title)", image: im, url: nil, latitude: 0, longitude: 0, objectID: nil, type: SSDKContentType.auto)
+            
+            ShareSDK.share(SSDKPlatformType.typeSinaWeibo, parameters: sharePara, onStateChanged: { (_, _, _, error) in
+                
+                print("\(error)")
+                
+            })
+            
+
+        
+        }))
         shareAlert.addAction(PMAlertAction(title: "cancel", style: PMAlertActionStyle.cancel))
         self.present(shareAlert, animated: true, completion: nil)
     }

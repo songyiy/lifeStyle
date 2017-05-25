@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -40,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                 appInfo?.ssdkSetupSinaWeibo(byAppKey: "3181750951",
                                             appSecret : "df4f720d8c7e925a29021e585e79d505",
-                                            redirectUri : "http://www.sharesdk.cn",
+                                            redirectUri : "www.mob.com",
                                             authType : SSDKAuthTypeBoth)
                 
             case SSDKPlatformType.typeWechat:
